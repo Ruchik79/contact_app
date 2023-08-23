@@ -1,0 +1,14 @@
+body {
+    background-color: lightblue;
+  }
+
+  
+  h1 {
+    color: rgb(232, 139, 25);
+  }
+
+  .fields-container{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }

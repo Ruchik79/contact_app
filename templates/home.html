@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="/static/home.css">
+    
+    <title>ContactApp</title>
+</head>
+<body>
+    <h1>Contact Manger App <small>I personally use it everyday.</small></h1>
+	 <h2>Hi {{username}} </h2>	
+     <button type="button" onclick="window.open('/logout','_self')">Logout</button>
+    <form action="/saveContactDetails" method="POST">
+       
+            <label>
+                Name:
+                <input name="name" type="text" placeholder="Given Name">
+            </label>
+       
+       
+            <label>
+                Email:
+                <input name="email" type="email" placeholder="email">
+            </label>
+   
+      
+            <label>
+                Phone:
+                <input name="phone" type="tel" placeholder="Phone Num...">
+            </label>
+
+            <input type="submit" value="Add Contact">
+        </form>
+		
+
+
+		<div class="more-option">
+			<div class="more-option-btn">More Option</div>
+			<div class="option-container">
+				<button type="button" class="delete-all">Delete All</button>
+				<button type="button" class="save">Save</button>
+				<button onclick="window.open('/fetchContactDetails')" type="button" class="load">Load</button>
+				<div class="delete-one">
+					<label>Delete Contact:
+						<input type="text" placeholder="Write full name...">
+						<span>* Please write full name then delete button to delete specific contact.</span>
+					</label>
+					<button type="button" class="delete-one-btn">Delete</button>
+				</div>
+			</div>
+		</div>
+	
+    <div class="contact-indx"></div>
+
+  <button type="button" onclick="window.open('/aboutUs','_self')">About Us</button>
+</body>
+</html>
